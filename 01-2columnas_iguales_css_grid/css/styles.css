@@ -1,0 +1,53 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.entrada-blog a {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/** CODIGO AQUI **/
+/* 1. Crear un media query para que cuando la pantalla sea de x tamaño pase de 1 a 2 columnas (dispositivos mas grandes) */
+@media (min-width: 768px) { /*Medida estandar de una tablet (768px)*/
+    /* 2. Crear una clase padre que contenga a todo lo que se quiere trabajar (en este caso son los "article")*/
+    .dos-columnas {
+        /* 3. Invocar a la clase que se desea usar (en este caso "grid") */
+        display: grid;
+        /* 4. Como se quieren usar columnas se llama a esa funcion del grid y se le especifica cuantas columnas desea usar, en este caso 2 */
+        grid-template-columns: 1fr 1fr;
+        /* 5. Agregar una separacion entre las dos columnas */
+        column-gap: 2rem;
+    }
+}
